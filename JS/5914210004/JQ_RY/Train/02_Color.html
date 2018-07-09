@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @font-face{
+            font-family: myfn1;
+            src: url('Font/WR Tish Kid2.ttf');
+        }
+        #but1{
+            font-family: myfn1;
+            background-color: orange;
+            color: red;
+        }
+        #text1 {
+            background-color: bisque;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#but1").click(function () {
+                if ($("#text1").val() % 2 == 0){
+                    $("#p1").html("เลขคู่");
+                    $("#p1").css("backgroundColor","red");
+                    $("#p1").css("fontSize","80px");
+                    $("#p1").css("color","white")
+
+                }
+                else {
+                    $("#p1").html("เลขคี่");
+                    $("#p1").css("backgroundColor","green");
+                    $("#p1").css("fontSize","80px");
+                    $("#p1").css("color","white")
+                }
+
+                    })
+        })
+    </script>
+</head>
+<body>
+<input type="text" id="text1"><br>
+<input type="button" value="Start" id="but1">
+<p id="p1"></p>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function myfn1() {
+            var text1 = document.getElementById("text1");
+            var result = document.getElementById("result");
+            var alphabet = [];
+            var alphabet_count = [];
+            var tmp_msg = text1.value.toLowerCase();
+            var alpha_index = 0;
+            result.innerHTML = "";
+            for (var i = 0; i < text1.value.length; i++) {
+                    alpha_index = alphabet.indexOf(tmp_msg[i]);
+                    if (alpha_index === -1) {
+                        alphabet.push(tmp_msg[i]);
+                        alphabet_count.push(1);
+                    } else {
+                        alphabet_count[alpha_index] += 1;
+                    }
+            }
+            result.innerHTML = "Result of counting: <br>";
+            for (var i =0; i < alphabet.length; i++) {
+                result.innerHTML += "Character '" + alphabet[i] + "' : " + alphabet_count[i] + "<br>";
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="text1" placeholder="Enter text"> <br>
+<input type="button" id="go" value="Go" onclick="myfn1();">
+<p id="result"></p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

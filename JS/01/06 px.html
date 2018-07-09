@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #first {
+            background-color: chartreuse;
+            color: white;
+            /*ความยาว*/
+            width: 250px;
+            /*กรอบในเกือบนอก*/
+            padding: 20px;
+        }
+
+        #second {
+            background-color: lightcoral;
+            color: white;
+            width: 250px;
+            padding-bottom: 30px;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+
+        #third {
+            background-color: coral;
+            color: white;
+            width: 250px;
+            /*บน ขวา ล่าง ซ้าย ตามเข็มนาฬิกา*/
+            /*padding: 10px 20px 30px 40px;*/
+            /*บน ขวา=ซ้าย ล่าง*/
+            /*padding: 10px 20px 30px;*/
+            /*บน=ล่าง  ซ้าย=ขวา*/
+            padding: 10px 20px;
+        }
+
+        #fourth {
+            background-color: lightcoral;
+            color: white;
+            width: 50%;
+            margin: 20px;
+        }
+
+        /*ในแถวเดียวกัน*/
+        p {
+            display: inline;
+        }
+
+        /*ขึ้นบรรทัดใหม่*/
+        a {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div id="div-main">
+    <p id="first">Hello, First</p>
+    <p id="second">Hello, second</p>
+    <p id="third">Hello, Third</p>
+    <p id="fourth">Hello, Fourth</p>
+
+
+</div>
+<div id="div-second">
+    <a id="a-first" href="http://www.google.com">Google</a>
+    <a id="a-second" href="http://www.youtube.com">Youtube</a>
+    <a id="a-third" href="http://www.facebook.com">Facebook</a>
+
+</div>
+</body>
+</html>

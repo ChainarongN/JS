@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+ <style>
+     #div1 {
+         width:  100px;
+         height: 100px;
+         background-color: orange;
+
+         transition-property: width;
+         transition-duration: 1s;
+         transition-timing-function: linear;
+         transition-delay: 0s;
+     }
+     #div1:hover {
+         width: 350px;
+         background-color: #28622A;
+     }
+     #div2 {
+         width: 100px;
+         height: 100px;
+         background-color: green;
+         transition-property: width,height;
+         transition-duration: 1s;
+         transition-timing-function: ease;
+         transition-delay: 0s;
+     }
+     #div2:hover {
+         width: 150px;
+         height: 150px;
+         background-color: lawngreen;
+     }
+ </style>
+</head>
+<body>
+<div id="div1"></div>
+<div id="div2"></div>
+
+</body>
+</html>

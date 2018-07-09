@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @font-face {
+            font-family: myfont1;
+            src: url('Font/Bangnampueng.ttf');
+        }
+
+        /*ทั้งหมดตาราง*/
+        #star {
+            width: 100%;
+            font-size: 1.3cm;
+            border: 2px solid darkgreen;
+            font-family: myfont1;
+            border-collapse: collapse;
+        }
+
+        /*ส่วนหัวของตาราง*/
+        th {
+            font-size: 1.5cm;
+            color: white;
+            background-color: lightgreen;
+        }
+
+        .alt {
+            background-color: bisque;
+        }
+
+        /*border หน้าขึ้น  Solid เส้น*/
+        td, th {
+            border: 2px solid darkgreen;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<table id="star">
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+    </tr>
+    <tr>
+        <td>Hideaki</td>
+        <td>Takizawa</td>
+    </tr>
+    <tr class="alt">
+        <td>Steven</td>
+        <td>Rogers</td>
+    </tr>
+    <tr>
+        <td>Harry</td>
+        <td>Potter</td>
+    </tr>
+    <tr class="alt">
+        <td>Songpol</td>
+        <td>Ruensuk</td>
+    </tr>
+</table>
+</body>
+</html>

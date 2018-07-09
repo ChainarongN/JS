@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+        @font-face {
+            font-family: myfn1;
+            src: url(Font/Bangnampueng.ttf)
+        }
+
+        #text1, #text2 {
+            font-family: myfn1;
+        }
+
+    </style>
+</head>
+<script>
+    $(document).ready(function () {
+        $($("#text1")).keypress(function (nn) {
+            var text1 = $("#text1");
+            var i = 0;
+            var sum = 0;
+            if (nn.keyCode == 13) {
+
+                $.ajax({
+                        url: '01.php',
+                        method: 'get',
+                        dataType: 'json',
+                        data: {
+                            text1: text1.val(),
+                        },
+                        success: function (data) {
+                            $("#p1").html(data);
+                            var sum1 = data;
+                            for (i = 0; i <= data.length; i++) {
+                                if (sum1[i] > 48 || sum1[i] < 57) {
+                                    sum = sum +  parseInt(sum1[i]);
+                                }
+//                                if (!isNaN(sum1[i])){
+//                                    sum = sum + parseInt (sum1[i]);
+//                                }
+                            }
+                            $("#text2").val(sum);
+
+
+                        }
+                    }
+                )
+            }
+        })
+    })
+
+
+</script>
+<body>
+<input type="text" id="text1"><br>
+<p id="p1"></p>
+<input type="text" id="text2" disabled>
+
+</body>
+</html>

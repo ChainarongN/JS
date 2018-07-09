@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function myfn1() {
+            var text1 = document.getElementById("text1")
+            var p1 = document.getElementById("p1")
+            p1.innerHTML = text1.value;
+        }
+        function myfn2() {
+            var text1 = document.getElementById("text1")
+            var p1 = document.getElementById("p1")
+            var result = "";
+            var i = 0;
+            while (i < text1.value) {
+                result += "*";
+                i++;
+            }
+            p1.innerHTML = result;
+
+        }
+        function myfn3() {
+            var text1 = document.getElementById("text1")
+            var p1 = document.getElementById("p1")
+            var se1 = document.getElementById("se1")
+            var result = "";
+            var i = 0;
+            while (i < text1.value) {
+                result += se1.value;
+                i++;
+
+            }
+            p1.innerHTML = result;
+
+        }
+    </script>
+</head>
+<body>
+<input type="text " id="text1"> <br>
+<input type="button" id="but1" value="Click" onclick="myfn1()">
+<input type="button" id="but2" value="Click02" onclick="myfn2()">
+<input type="button" id="but3" value="Click03" onclick="myfn3()">
+<p id="p1"></p>
+<select id="se1">
+    <option value="!">!</option>
+    <option value="@">@</option>
+    <option value="%">%</option>
+
+</select>
+</body>
+</html>

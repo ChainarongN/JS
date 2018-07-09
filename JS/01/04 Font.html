@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+                    <!--Font ของ Google-->
+    <link href="https://fonts.googleapis.com/css?family=Itim|Pattaya" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+                /*โหลด Font ตั้ง Font ของตัวเอง*/
+        @font-face {
+            font-family: myfont1;
+            src: url('Font/Bangnampueng.ttf');
+        }
+        @font-face {
+            font-family: myfont2;
+            src: url('Font/waan-free_regular.ttf');
+        }
+        @font-face {
+            font-family: myfont3;
+            src: url('Font/WR Tish Kid2.ttf');
+        }
+
+        #p1 {
+            /*สีตัวอักษร*/
+            color: red;
+            /*ขีดเส้นบน*/
+            text-decoration: overline;
+            /*เปลี่ยน Font*/
+            font-family: myfont1;
+             /*ตัวเอียง*/
+            font-style: italic;
+        }
+
+        #p2 {
+            color: blue;
+             /*ตำแหน่งกลาง*/
+            text-align: center;
+            /*ขีดเส้นใต้*/
+            text-decoration: underline;
+            /*เงา*/
+            text-shadow: 0px 0px 5px red;
+            /*ตัวหนา*/
+            font-weight: bold;
+
+            font-family: myfont2;
+        }
+
+        #p3 {
+            /*ตำแหน่งขวา*/
+            text-align: right;
+            /*ขนาดใหญ่หมด*/
+            text-transform: uppercase;
+             /*ขีดเส้นตรงกลาง*/
+            text-decoration: line-through;
+            font-family: cursive;
+
+        }
+
+        #p5 {
+            /*ขนาดเล็กหมด*/
+            text-transform: lowercase;
+            font-family: myfont3;
+        }
+
+        #p4 {
+                /*ใหญ่แค่ตัวแรก*/
+            text-transform: capitalize;
+            font-family: Pattaya;
+        }
+        a:link {
+            /*สีของลิ้ง*/
+            color: deeppink;
+        }
+         /*เวลาเอาเม้าไปชี้*/
+        a:hover {
+            color: blue;
+        }
+         /*เวลากด*/
+        a:active {
+            color:green;
+        }
+          /*ลิ้งที่เคยไปมาแล้ว*/
+        a:visited {
+            color: yellow;
+        }
+            /*ชี้ตัวหนังสือแล้วเปลี่ยนสี*/
+        p:hover {
+            background-color: #28622A;
+        }
+    </style>
+</head>
+<body>
+<p id="p1">First</p>
+<p id="p2">Second</p>
+<p id="p3">Third</p>
+<p id="p4">Fourth, hello me name is Nueng</p>
+<p id="p5">Fifth</p>
+
+       <!--ลิ้งไปเว็บนอก-->
+<a href="http://www.youtube.com" id="a1">Youtube</a>
+
+</body>
+</html>

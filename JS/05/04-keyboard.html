@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Keyboard</title>
+    <script>
+        function f_keyboard(that) {
+            alert(that.value);
+
+        }
+    </script>
+</head>
+<body>
+<input type="text" placeholder="keydown" onkeydown="f_keyboard(this);"> <br>
+<input type="text" placeholder="keypress" onkeypress="f_keyboard(this);"> <br>
+<input type="text" placeholder="keyup" onkeyup="f_keyboard(this);"> <br>
+
+</body>
+</html>

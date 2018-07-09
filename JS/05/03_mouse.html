@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse</title>
+    <style>
+        #p1 {
+            background-color: green;
+            color: white;
+
+        } #p2 {
+            background-color: green;
+            color: white;
+
+        }#p3 {
+            background-color: green;
+            color: white;
+
+        }#p4 {
+            background-color: green;
+            color: white;
+
+        }
+    </style>
+    <script>
+        function f_mover() {
+            var p1 = document.getElementById("p1");
+            p1.style.backgroundColor = "red";
+
+        }
+        function f_mout() {
+            var p1 = document.getElementById("p1");
+            p1.style.backgroundColor = "green";
+
+        }   function f_mover1() {
+            var p2 = document.getElementById("p2");
+            p2.style.backgroundColor = "red";
+
+        }
+        function f_mout1() {
+            var p2 = document.getElementById("p2");
+            p2.style.backgroundColor = "green";
+
+        }    function f_mover2() {
+            var p3 = document.getElementById("p3");
+            p3.style.backgroundColor = "red";
+
+        }
+        function f_mout2() {
+            var p3 = document.getElementById("p3");
+            p3.style.backgroundColor = "green";
+
+        } function f_mover3() {
+            var p4 = document.getElementById("p4");
+            p4.style.backgroundColor = "red";
+
+        }
+        function f_mout3() {
+            var p4 = document.getElementById("p4");
+            p4.style.backgroundColor = "green";
+
+        }
+    </script>
+</head>
+<body>
+<p id="p1" onmouseover="f_mover();" onmouseout="f_mout();">
+    My name is Harry Potter
+</p><p id="p2" onmouseover="f_mover1();" onmouseout="f_mout1();">
+    My name is Hideaki Takizawa
+</p><p id="p3" onmouseover="f_mover2();" onmouseout="f_mout2();">
+    My name is Steve Rogers
+</p><p id="p4" onmouseover="f_mover3();" onmouseout="f_mout3();">
+    My name is Songpol Ruensuk
+</p>
+</body>
+</html>

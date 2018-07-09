@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#but1").click(function () {
+                $("#result").html($("#text1").val().split("").reverse().join(""));
+            });
+        });
+    </script>
+</head>
+<body>
+<input type="text" id="text1">
+<input type="button" id="but1" value="OK">
+<p id="result"></p>
+</body>
+</html>

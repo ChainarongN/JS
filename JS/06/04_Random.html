@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    function myfn1() {
+        var p1 = document.getElementById("p1")
+        var n = Math.round(Math.random() * 10);
+        p1.innerHTML = n;
+        if (n % 2 ==0) {
+            p1.style.background = "green";
+        }
+        else {
+            p1.style.background = "red";
+        }
+    }
+</script>
+<body>
+<input type="button" value="Odd | Even" onclick="myfn1()">
+<p id="p1"></p>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .searchbox {
+            background-color: red;
+            color: white;
+            border-bottom-left-radius: 17px;
+            border-bottom-right-radius: 17px;
+            border-top-right-radius: 17px;
+            border-top-left-radius: 17px;
+            padding: 10px 30px;
+            border: none;
+            font-size: 1ch;
+
+
+
+
+
+        }
+        #searchbox {
+            background-color: blue;
+            border-bottom-left-radius: 17px;
+            border-top-left-radius: 17px;
+            padding: 10px 30px;
+            font-size: 1ch;
+            color: white;
+            position: relative;
+            border: none;
+        }
+        .searchbutton {
+            background-color: green;
+            border-bottom-right-radius: 17px;
+            border-top-right-radius: 17px;
+            padding: 10px 30px;
+            color: white;
+            font-size: 1ch;
+            border: none;
+            position: relative;
+            left: -50px;
+
+        }
+        .searcharea {
+            position: fixed;
+            left: 30%;
+            right: 30%;
+
+        }
+
+
+
+    </style>
+</head>
+<body align="center">
+<div class="searcharea">
+    <form action="https://www.google.com">
+        <label for="searchbox" class="searchbox">ค้นหา</label>
+        <input type="text" name="q" id="searchbox" placeholder="enter keyword" title="Google">
+        <input type="submit" value="Go !!" class="searchbutton">
+    </form>
+</div>
+</body>
+</html>

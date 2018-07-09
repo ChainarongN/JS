@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    function check_enter(e) {
+//        alert(e.which);
+        if (e.which == 13){
+            myfn1();
+        }
+        else if (e.which >= 48 && e.which <=57){
+            return false;
+        }
+
+    }
+    function myfn1() {
+        var text1 = document.getElementById("text1");
+        var text2 = document.getElementById("password2");
+        var p1 = document.getElementById("p1");
+
+
+        if (text1.value.length == 0) {
+            p1.innerHTML = "Error (User)";
+            text1.focus()
+        }
+        else if (text1.value.length < 5) {
+            p1.innerHTML = "Error ต้องมีมากกว่า 5 ตัว (User)";
+            text1.focus()
+        }
+        else if (text2.value.length == 0) {
+            p1.innerHTML = "Error1 (Password)";
+            text2.focus()
+        }
+        else if (text2.value.length < 5) {
+            p1.innerHTML = "Error ต้องมีมากกว่า 5 ตัว (Password)";
+            text2.focus();
+        }
+        else if (text1.value == "harry" && text2.value == "potter") {
+            p1.innerHTML = "Login Complete";
+        }
+        else {
+            p1.innerHTML = "ID , Password ไม่ต้อง"
+        }
+
+
+    }
+</script>
+<body>
+<input type="text" id="text1" placeholder="User name"><br>
+<input type="password" id="password2" placeholder="Password" onkeypress="return check_enter(event) "><br>
+<input type="button" id="but1" value="Login" onclick="myfn1();">
+
+
+<p id="p1"></p>
+</body>
+</html>

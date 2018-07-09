@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+        #head {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: 50px;
+        }
+        #table1 {
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            var win = 0;
+            var draw = 0;
+            var lose = 0;
+            var total = 0;
+            $("#sell").change(function () {
+                var sell = $("#sell");
+                var img1 = $("#img1");
+
+                img1.attr("src",sell.val() + ".jpg");
+                $("#but1").focus();
+                $("#but1").trigger('click');
+
+            });
+            $("#but1").click (function () {
+//                $("#but1").attr('disabled','disabled');
+                var result = $("#result");
+                var img2 = $("#img2");
+                var ran = 0;
+                var i = 0;
+                var sell = $("#sell");
+                var tmp = 0;
+                total++;
+
+                var show = setInterval(function () {
+                   img2.attr("src", (i % 3) +".jpg") ;
+                   i++;
+//                    if (i > 2) {
+//                        i = 0;
+//                    }
+                }, 100);
+
+
+                $("#but1").prop("disabled", true);
+
+                setTimeout(function () {
+                    clearInterval(show);
+                    ran = parseInt((Math.random() * 1000) % 3);
+                    img2.attr("src",ran + ".jpg");
+                    $("#but1").prop("disabled", false);
+
+                    if(sell.val() === "0") {
+                        if(ran === 0) {
+                            tmp = "DRAW";
+                            draw++;
+                        } else if (ran === 1) {
+                            tmp = "WIN";
+                            win++;
+                        } else if (ran === 2) {
+                            tmp = "LOOSE";
+                            lose++;
+                        }
+                    }
+                    else if(sell.val() === "1") {
+                        if(ran === 0) {
+                            tmp = "LOSE";
+                            lose++;
+                        } else if (ran === 1) {
+                            tmp = "DRAW";
+                            draw++;
+                        } else if (ran === 2) {
+                            tmp = "WIN";
+                            win++;
+                        }
+                    }
+                    else if(sell.val() === "2") {
+                        if(ran === 0) {
+                            tmp = "WIN";
+                            win++;
+                        } else if (ran === 1) {
+                            tmp = "LOSE";
+                            lose++;
+                        } else if (ran === 2) {
+                            tmp = "DRAW";
+                            draw++;
+                        }
+                    }
+                    $("#result").slideUp(function () {
+                        $("#result").html(tmp);
+                        $("#result").slideDown();
+                    });
+                    $("#result2").html(win);
+                    $("#result4").html(lose);
+                    $("#result5").html(draw);
+                    $("#result3").html("Total :"+total);
+
+                }, 1000);
+//                result.html(tmp);
+//                if (i == 2) {
+//                    i = 0;
+//                }
+//                ran = parseInt((Math.random() * 1000) % 3);
+//                img2.attr("src",ran + ".jpg");
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="head">มาเล่น เป่า ยิง ฉุบ กัน !!!!</div>
+<div id="main-div">
+    <table id="table1" width="80%" >
+        <tr>
+            <td width="50%"><img src="0.jpg" id="img1" alt="Weapon"></td>
+            <td><img src="" id="img2" alt="Destroy"></td>
+        </tr>
+        <tr>
+            <td>
+                <select name="" id="sell">
+                    <option value="0">ค้อน</option>
+                    <option value="1">กรรไกร</option>
+                    <option value="2">กระดาษ</option>
+                </select>
+            </td>
+            <td>
+                <input type="button" id="but1" value="Random">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <p id="result"> </p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p id="result1">Win :</p>
+                <p id="lose">Lose :</p>
+                <p id="draw">Draw :</p>
+            </td>
+            <td>
+                <p id="result2"></p>
+                <p id="result4"></p>
+                <p id="result5"></p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <p id="result3"></p>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1 {
+            background-color: #28622A;
+                /*จัดตำแหน่งไม่ได้*/
+            position: static;
+
+        }
+
+        #div2 {
+            background-color: blue;
+                /*จัดตำแหน่งได้*/
+            position: relative;
+            left: 10px;
+            top:10px;
+
+        }
+
+        #div3 {
+            background-color: #b3d4fc;
+            position: relative;
+        }
+
+        #div4 {
+            background-color: aqua;
+            position: absolute;
+            right: -10px;
+            top: 0px;
+        }
+
+        #div5 {
+            background-color: cadetblue;
+        }
+
+        #div6 {
+            background-color: yellow;
+        }
+
+        #div7 {
+            background-color: chocolate;
+                /*ไม่ให้ขยับ*/
+            position: fixed;
+            right:  0px;
+            top: 0px;
+        }
+
+        div {
+            padding: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    div1
+    <div id="div2">div2</div>
+    <div id="div3">
+        div3
+        <div id="div4">div4</div>
+        <div id="div5">div5</div>
+        <div id="div6">div6</div>
+    </div>
+    <div id="div7">div7</div>
+</div>
+</body>
+</html>

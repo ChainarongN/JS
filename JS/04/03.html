@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function myfn1() {
+            var text1 = document.getElementById("text1");
+            var p1 = document.getElementById("p1");
+            if (text1.value % 2 == 0) {
+                p1.innerHTML = "เลขคู่";
+            }
+            else {
+                p1.innerHTML = "เลขคี่";
+            }
+
+        }
+
+
+
+    </script>
+</head>
+<body>
+<input type="text" id="text1">
+<input type="button" value="Check" onclick="myfn1()">
+</body>
+<p id="p1"></p>
+</html>

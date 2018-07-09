@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function myfn1() {
+            var p1 = document.getElementById("p1");
+            var i = 0;
+            var result = " ";
+            for (i = 0; i < 100; i++) {
+
+//                 continue ยกเลิกการทำงาน เมื่อถึง 18 เจอ continue จะไม่ทำ
+//                break คือ หยุดการทำงานและแสดงผล เท่าที่ได้
+                if  (i ==18) {
+                    break;
+//                    continue;
+                }
+//                การให้แสดงแค่เลขคู่
+                if (i % 2 ==0) {
+                    result += i + " ";
+//                result = result + i + " ";
+                }
+
+            }
+            p1.innerHTML = result;
+        }
+
+
+    </script>
+</head>
+<body>
+<input type="button" value="for" id="but1" onclick="myfn1()">
+<p id="p1"></p>
+</body>
+</html>

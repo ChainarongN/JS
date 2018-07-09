@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function myfn1() {
+            var a = 18;
+            var b = "8";
+            b = parseInt(b)
+
+            var p1 = document.getElementById("p1");
+            p1.innerHTML = "ผลบวก" + (a + b);
+
+        }
+        function myfn2() {
+            var a = 18;
+            var b = "8";
+            parseInt(b)
+            var p2 = document.getElementById("p1");
+            p2.innerHTML = "ผลบวก" + (a - b);
+
+        }
+        function myfn3() {
+            var a = 18;
+            var b = "8";
+            parseInt(b)
+            var p3 = document.getElementById("p1");
+            p3.innerHTML = "ผลบวก" + (a * b);
+        }
+        function myfn4() {
+            var a = 18;
+            var b = "8";
+            parseInt(b)
+            var p4 = document.getElementById("p1");
+            p4.innerHTML = "ผลบวก" + (a / b);
+        }
+        function myfn5() {
+            var a = 18;
+            var b = "8";
+            parseInt(b)
+            var p5 = document.getElementById("p1");
+            p5.innerHTML = "ผลบวก" + (a % b);
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="+" onclick="myfn1();">
+<input type="button" value="-" onclick="myfn2();">
+<input type="button" value="*" onclick="myfn3();">
+<input type="button" value="/" onclick="myfn4();">
+<input type="button" value="%" onclick="myfn5();">
+<br>
+<p id="p1"></p>
+</body>
+</html>

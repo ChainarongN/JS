@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#text1").keyup (function () {
+                $("#p1").html("ข้อความมีทั้งหมด  :  "+$("#text1").val().length+" ตัวอักษร");
+                if ($("#text1").val().length  == 0){
+                    $("#p1").css("background","white");
+                    $("#p1").css("color","black");
+                    $("#text1").focus();
+                }
+                else if ($("#text1").val().length %2 == 0) {
+                    $("#p1").css("background","blue");
+                    $("#p1").css("color","white");
+                }
+                else {
+                    $("#p1").css("background", "red");
+                    $("#p1").css("color", "white");
+                    $("#text1").focus();
+                    $("#text1").reverse();
+                }
+            });
+        })
+    </script>
+</head>
+<body>
+<input type="text" id="text1">
+<input type="button" id="but1" value="OK">
+<p id="p1"></p>
+</body>
+</html>

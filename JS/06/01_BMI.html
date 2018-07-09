@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bmi</title>
+</head>
+<script>
+    function myfn1() {
+//        alert("AAAA");
+        var text1 = document.getElementById("text1");
+        var text2 = document.getElementById("text2");
+        var p1 = document.getElementById("p1");
+        //var bmi = 1.56;
+        var bmi = (text1.value / (text2.value / 100 * text2.value / 100)).toFixed(2);
+
+
+
+//        alert(bmi);
+        if (bmi <= 18.50) {
+            p1.innerHTML = "ค่า BMI ของคุณคือ " + bmi + " ผอม";
+            p1.style.backgroundColor = "green";
+            p1.style.color = "white";
+
+        }
+        if (bmi >= 18.51 && bmi <= 23.00) {
+            p1.innerHTML = "ค่า BMI ของคุณคือ " + bmi + " ปกติ";
+            p1.style.backgroundColor = "blue";
+            p1.style.color = "white";
+
+        }
+        if (bmi > 23.01) {
+            p1.innerHTML = "ค่า BMI ของคุณคือ " + bmi + " อ้วน";
+            p1.style.backgroundColor = "red";
+            p1.style.color = "white";
+
+        }
+
+
+    }
+</script>
+<body>
+<input type="text" id="text1">
+<input type="text" id="text2">
+<input type="button" value="Calculate" id="but1" onclick="myfn1();">
+
+<p id="p1"></p>
+</body>
+</html>

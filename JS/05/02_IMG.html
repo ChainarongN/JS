@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image</title>
+    <style>
+        img {
+            width: 30%;
+        }
+
+    </style>
+    <script>
+        function myfn1() {
+            var text1 = document.getElementById("text1");
+            var p1 = document.getElementById("p1");
+            p1.innerHTML = text1.value;
+
+        }
+        function myfn2() {
+            var img1 = document.getElementById("img1");
+            img1.src = "img/11111.jpg";
+            img1.title = "Chainarong";
+
+
+        }
+        function myfn3() {
+            var img2 = document.getElementById("img2");
+            img1.src = "img/2222.jpg";
+
+        }
+        function myfn4() {
+            var col1 = document.getElementById("col1");
+            var col2 = document.getElementById("col2");
+            var but4 = document.getElementById("but4");
+            var text1 = document.getElementById("text1");
+            var se = document.getElementById("se");
+            but4.style.backgroundColor = col1.value;
+            but4.style.color = col2.value;
+            but4.style.fontSize = text1.value + 'px';
+            but4.style.borderRadius = se.value + 'px';
+
+
+        }
+    </script>
+</head>
+<body>
+<input type="button" id="but1" value="content" onclick="myfn1();">
+<input type="button" id="but2" value="Image02" onclick="myfn2();">
+<input type="button" id="but3" value="Image03" onclick="myfn3();">
+
+<input type="button" id="but4" value="Color" onclick="myfn4();">
+
+<input type="color" id="col1">
+<input type="color" id="col2">
+
+
+<br>
+<input type="text" id="text1">
+
+
+<br>
+<p id="p1"></p>
+<select id="se">
+    <option value="2">2</option>
+    <option value="5">5</option>
+    <option value="10">10</option>
+
+    <img src="IMG/2222.jpg" id="img1">
+
+</select>
+</body>
+</html>
